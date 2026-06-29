@@ -1,0 +1,8 @@
+{
+  "name": "create-knowledge",
+  "version": "1.0.0",
+  "description": "Build a second-brain knowledge base from a git repository's commit history over a chosen time window, filtering out reverts, merges, formatting, and other noise.",
+  "author": "Manimaran",
+  "license": "MIT",
+  "skills": ["create-knowledge"]
+}
