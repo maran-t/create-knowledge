@@ -1,6 +1,6 @@
 # create-knowledge
 
-A [Claude](https://claude.ai) / [Claude Code](https://docs.claude.com/en/docs/claude-code) skill that turns a Git repository's **commit history into a structured Markdown knowledge base** — a "second brain" for a codebase.
+The skill that turns a Git repository's **commit history into a structured Markdown knowledge base** — a "second brain" for a codebase.
 
 Point it at a repo and a time window ("last 1 year", "last 6 months", "last 2 years"). It reads the commit log, filters out the noise (reverts, merges, formatting, label/version bumps, typo fixes), and synthesizes what's left into themed engineering knowledge: what was built, why, and where the dragons live.
 
@@ -75,10 +75,6 @@ python3 scripts/extract_commits.py --repo . --since "6 months ago" --path src/ -
 ## What gets filtered out
 
 Commits carrying no durable knowledge are dropped: reverts, merge commits, formatting/lint-only changes, comment & typo churn, version/label/changelog bumps, and trivial chores (wip, file renames, gitignore tweaks, pure CI config). Anything representing a feature, real bug fix, refactor with rationale, architecture decision, performance work, security fix, or API/data-model change is kept.
-
-## Limitations
-
-Filtering is regex-based on commit messages plus diff stats, so output quality tracks commit-message quality. On a repo with vague messages or heavily squashed PRs, it can both keep noise and drop signal — it errs toward keeping borderline cases. Always sanity-check the result against the repo. It does not (yet) read PR descriptions, issues, or diffs in depth.
 
 ## Requirements
 
