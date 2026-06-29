@@ -21,11 +21,12 @@ that links out to per-theme files, plus `decisions.md` and `problem-areas.md` â€
 
 ## Installation
 
-### Claude Code (plugin marketplace)
-
 ```
-/plugin marketplace add <your-username>/create-knowledge
+/plugin marketplace add maran-t/create-knowledge
 /plugin install create-knowledge@create-knowledge
+or
+
+npx skills add maran-t/create-knowledge
 ```
 
 ### Manual (any Claude environment with skills)
